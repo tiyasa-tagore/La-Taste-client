@@ -4,6 +4,7 @@ import Brand from '../../assets/icons/brand.jpg'
 import { Link } from 'react-router-dom';
 import './Header.css'
 import { AuthContext } from '../../provider/AuthProvider';
+import ActiveLink from '../ActiveRoute/ActiveLink';
 
 const Header = () => {
     const { user, loading, signOutGoogle } = useContext(AuthContext)
@@ -37,10 +38,12 @@ const Header = () => {
                                 <Offcanvas.Body>
                                     <Nav className="justify-content-end flex-grow-1 pe-3">
                                         <Nav.Link className='text-dark fs-4' href="#action1">
-                                            <Link to="/">Home</Link>
+                                        <ActiveLink to="/">Home</ActiveLink>
+                                            {/* <Link to="/">Home</Link> */}
                                         </Nav.Link>
                                         <Nav.Link className='text-dark fs-4' href="#action2">
-                                            <Link to="/blog">Blog</Link>
+                                            {/* <Link to="/blog">Blog</Link> */}
+                                            <ActiveLink to="/blog" >Blog</ActiveLink>
                                         </Nav.Link>
 
                                     </Nav>
