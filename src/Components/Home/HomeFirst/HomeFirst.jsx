@@ -7,7 +7,7 @@ const HomeFirst = () => {
     return (
     <div >
         
-        <Row className=''>
+        <Row className='mx-auto'>
         <Col sm={8}>
             <img src={Chefone} className="MainImage img-fluid mt-5" alt="" />
         </Col>
@@ -26,8 +26,7 @@ const HomeFirst = () => {
             </Col>
       </Row>
 
-      
-            
+         
             
             </div>
             

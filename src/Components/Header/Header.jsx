@@ -19,9 +19,10 @@ const Header = () => {
                 {['sm'].map((expand) => (
                     <Navbar key={expand} bg="warning bg-opacity-50" expand={expand} className="mb-3 p-3">
                         <Container fluid>
+                        <Link to="/" >
                             <img src={Brand} width="40"
-                                height="40" alt="" />
-                            <Navbar.Brand className='fs-1 pl-3' href="#">LA TASTE </Navbar.Brand>
+                                height="40" alt="" /> </Link>
+                            <Navbar.Brand className='fs-1 pl-3' href="#"><Link to="/" > LA TASTE  </Link> </Navbar.Brand>
                             <Navbar.Toggle aria-controls={`offcanvasNavbar-expand-${expand}`} />
                             <Navbar.Offcanvas
                                 id={`offcanvasNavbar-expand-${expand}`}

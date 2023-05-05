@@ -1,7 +1,8 @@
 import React, { useContext, useState } from 'react';
 import { AuthContext } from '../../provider/AuthProvider';
 import { useNavigate } from 'react-router-dom';
-import RegisterImage from '../../assets/icons/Register.jpg'
+import RegisterImage from '../../assets/icons/Register2.jpg'
+import { Container } from 'react-bootstrap';
 
 const Register = () => {
     const { createUser, userUpdate } = useContext(AuthContext)
@@ -63,8 +64,10 @@ const Register = () => {
         navigate('/')
     }
     return (
-        <div className=' container mt-3 mt-md-0'>
-            <div>
+        
+        <div className='container mx-auto d-flex justify-item-center align-items-center mt-5 mt-md-0 d-flex gap-5'>
+            <div className='mx-auto'>
+                <Container className=' mb-5 mt-5'>
                 <form onSubmit={handleFormSubmit}>
                     <h3> Register Here  </h3>
                     <p>{regerror ? 'Error in registration' : ''}</p>
@@ -89,12 +92,14 @@ const Register = () => {
                     </div>
                     <button type="submit" className="btn btn-success">Register</button>
                 </form>
+                </Container>
             </div>
-            <div>
-                <div className='login-image'>
-                    <img src={RegisterImage} height={100} className='img-fluid' alt="" />
-                </div>
+           
+            <div className='mt-5 ms-5'>
+                    <img  src={RegisterImage}
+                    width={600} className='img-fluid' alt="" />
             </div>
+            
         </div>
     );
 };

@@ -2,7 +2,7 @@ import React, { useContext, useEffect, useState } from 'react';
 import { AuthContext } from '../../provider/AuthProvider';
 import { Link, useLocation, useNavigate } from 'react-router-dom';
 import { FaGithub, FaGoogle } from 'react-icons/fa';
-import LoginImage from '../../assets/icons/Login.jpg'
+import LoginImage from '../../assets/icons/Login2.jpg'
 
 const Login = () => {
     const [loginUser, setLoginUser] = useState(null)
@@ -42,8 +42,8 @@ const Login = () => {
     }, [user])
 
     return (
-        <div className='login container mt-3 mt-md-0'>
-        <div>
+        <div className=' container  mt-3 mt-md-0 d-flex gap-5'>
+        <div className='container mx-auto me-5'>
             <form onSubmit={handleLoginForm}>
                 <h3>Please Login</h3>
                 <p>{loginError ? <span className='text-danger fw-bold fs-5'>{loginError}</span> : ''}</p>
@@ -51,28 +51,30 @@ const Login = () => {
                 <div className="mb-3">
                     <label for="exampleInputEmail1" className="form-label">Email address</label>
                     <input type="email" name='email' className="form-control" id="exampleInputEmail1" aria-describedby="emailHelp" required />
-                    <div id="emailHelp" className="form-text">We'll never share your email with anyone else.</div>
+                    
                 </div>
                 <div className="mb-3">
                     <label for="exampleInputPassword1" className="form-label">Password</label>
                     <input type="password" name='password' className="form-control" id="exampleInputPassword1" required />
                 </div>
-                <button type="submit" className="btn btn-primary">Login</button>
+                <button type="submit" className="btn btn-success">Login</button>
             </form>
 
             <hr />
             <div>
-                <p>If you don't have account <Link to="/register" className='sublink'>Register Now</Link> </p>
+                <p>If you don't have any account <Link to="/register" >Register </Link> </p>
             </div>
-            <div className='text-center py-5'>
-                <div className='google'><FaGoogle style={{fontSize: '2rem'}}></FaGoogle><span onClick={googleSignIn}>Sign in with Google</span></div>
-                <div className='github'>
-                    <FaGithub style={{fontSize: '2rem'}}></FaGithub><span onClick={githubLogin}>Sign in with Github</span></div>
+            <div className='text-center py-4 '>
+                <button  className='mt-2 p-2'><FaGoogle style={{fontSize: '2rem'}}></FaGoogle><span onClick={googleSignIn }> Sign in with Google</span></button>
+                <br />
+
+                <button className='mt-2 p-2'>
+                    <FaGithub style={{fontSize: '2rem'}}></FaGithub><span onClick={githubLogin}> Sign in with Github </span></button>
             </div>
         </div>
         <div>
             <div className='login-image'>
-                <img src={LoginImage} className='img-fluid' alt="" />
+                <img src={LoginImage} width={800} className='img-fluid' alt="" />
             </div>
         </div>
     </div>
