@@ -1,0 +1,10 @@
+.MainText{
+    color:black;
+    font-weight: bolder;
+    margin-top: 35%;
+}
+@media screen and (max-width:576px) {
+    .MainText, .MainImage {
+    padding: 50px 10px;
+}
+}

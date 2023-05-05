@@ -1,11 +1,11 @@
 import React from 'react';
 
-const Chefs = () => {
+const Homesecond = () => {
     return (
         <div>
-            <h2>chef</h2>
+            
         </div>
     );
 };
 
-export default Chefs;
+export default Homesecond;
