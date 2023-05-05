@@ -6,9 +6,10 @@ import { Col, Container, Row } from 'react-bootstrap';
 const HomeFirst = () => {
     return (
     <div >
-        <Row>
+        
+        <Row className=''>
         <Col sm={8}>
-            <img src={Chefone} className="MainImage img-fluid" alt="" />
+            <img src={Chefone} className="MainImage img-fluid mt-5" alt="" />
         </Col>
         <Col sm={4}>
         <div >
