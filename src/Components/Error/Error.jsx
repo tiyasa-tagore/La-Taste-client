@@ -1,10 +1,13 @@
 import React from 'react';
+import ErrorPic from '../../assets/icons/ErrorPic.jpg'
 
 const Error = () => {
     return (
-        <div>
-            <h2>error</h2>
-        </div>
+        
+            <div>
+                <img src={ErrorPic} className='img-fluid w-100' alt="" />
+            </div>
+        
     );
 };
 

@@ -7,6 +7,7 @@ import Register from "../Components/Register/Register";
 import UserProfile from "../Components/UserProfile/UserProfile";
 import ChefRecipe from "../Components/ChefRecipe/ChefRecipe";
 import PrivateRoute from "../privateRoute/PrivateRoute";
+import Error from "../Components/Error/Error";
 
 const router = createBrowserRouter([
     {
@@ -36,10 +37,14 @@ const router = createBrowserRouter([
             element: <UserProfile></UserProfile>
         },
         {
+            path: "*",
+            element: <Error></Error>
+        },
+        {
             path: "/chefrecipe/:id",
             element:<PrivateRoute> <ChefRecipe></ChefRecipe> </PrivateRoute> ,
             loader: ({ params }) => fetch(`https://b7a10-chef-recipe-hunter-server-side-tiyasa-tagor-tiyasa-tagore.vercel.app/chef/${params.id}`)
-        },
+        }
 
     ]
 
