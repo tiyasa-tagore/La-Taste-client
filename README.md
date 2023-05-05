@@ -6,7 +6,7 @@
 3. food
 4. service
 
- ## Live Link -
+ ## Live Link - https://chef-recipe-hunter-48003.web.app/
 
  ## Login Logout
  1. one can log out only after logging in
