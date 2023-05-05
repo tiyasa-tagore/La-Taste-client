@@ -12,6 +12,10 @@
  1. one can log out only after logging in
  2. 3 sections for login has been added.
 
+ ## user profile
+ 1. Separate user profile has been created. By clicking the user image, the logged in profile will be shown while loggng in.
+
+
  ## chef data
  1. all 6 chefs are visible
   
